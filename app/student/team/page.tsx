@@ -10,6 +10,7 @@ export default function StudentTeamPage() {
         { href: "/student/dashboard", label: "Dashboard" },
         { href: "/student/team", label: "Team Mode" }
       ]}
+      showSignOut
     >
       <Card>
         <h2 className="text-2xl font-black">Shared progress design</h2>

@@ -10,6 +10,7 @@ export default function TeacherContentPage() {
         { href: "/teacher", label: "Overview" },
         { href: "/teacher/content", label: "Content CMS" }
       ]}
+      showSignOut
     >
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {[

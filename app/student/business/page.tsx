@@ -10,6 +10,7 @@ export default function StudentBusinessPage() {
         { href: "/student/dashboard", label: "Dashboard" },
         { href: "/student/business", label: "Business" }
       ]}
+      showSignOut
     >
       <BusinessDashboard />
     </AppShell>

@@ -1,16 +1,19 @@
 import Link from "next/link";
 import { ReactNode } from "react";
+import { SignOutButton } from "@/components/auth/sign-out-button";
 
 export function AppShell({
   title,
   subtitle,
   nav,
-  children
+  children,
+  showSignOut = false
 }: {
   title: string;
   subtitle: string;
   nav: Array<{ href: string; label: string }>;
   children: ReactNode;
+  showSignOut?: boolean;
 }) {
   return (
     <div className="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-6 px-4 py-4 md:px-6">
@@ -22,6 +25,7 @@ export function AppShell({
           <h1 className="mt-1 text-3xl font-black">{title}</h1>
           <p className="mt-1 max-w-2xl text-sm text-[var(--muted)]">{subtitle}</p>
         </div>
+        <div className="flex flex-wrap items-center gap-2">
         <nav className="flex flex-wrap gap-2">
           {nav.map((item) => (
             <Link
@@ -33,6 +37,8 @@ export function AppShell({
             </Link>
           ))}
         </nav>
+        {showSignOut ? <SignOutButton /> : null}
+        </div>
       </header>
       <main className="flex-1">{children}</main>
     </div>

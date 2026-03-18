@@ -15,6 +15,7 @@ export default function TeacherPage() {
         { href: "/teacher/reports", label: "Reports" },
         { href: "/teacher/settings", label: "Settings" }
       ]}
+      showSignOut
     >
       <div className="space-y-4">
         <TeacherDashboard />

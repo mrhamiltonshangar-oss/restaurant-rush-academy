@@ -10,6 +10,7 @@ export default function TeacherSettingsPage() {
         { href: "/teacher", label: "Overview" },
         { href: "/teacher/settings", label: "Settings" }
       ]}
+      showSignOut
     >
       <div className="grid gap-4 md:grid-cols-2">
         {[

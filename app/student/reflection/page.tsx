@@ -13,6 +13,7 @@ export default function StudentReflectionPage() {
         { href: "/student/dashboard", label: "Dashboard" },
         { href: "/student/reflection", label: "Reflection" }
       ]}
+      showSignOut
     >
       <div className="grid gap-4 md:grid-cols-2">
         {prompts.map((prompt) => (

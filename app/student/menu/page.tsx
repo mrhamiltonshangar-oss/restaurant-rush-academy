@@ -10,6 +10,7 @@ export default function StudentMenuPage() {
         { href: "/student/dashboard", label: "Dashboard" },
         { href: "/student/menu", label: "Menu Planning" }
       ]}
+      showSignOut
     >
       <MenuPlanner />
     </AppShell>

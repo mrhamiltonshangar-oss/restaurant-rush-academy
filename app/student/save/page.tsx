@@ -11,6 +11,7 @@ export default function StudentSavePage() {
         { href: "/student/dashboard", label: "Dashboard" },
         { href: "/student/save", label: "Save" }
       ]}
+      showSignOut
     >
       <Card>
         <div className="grid gap-3 md:grid-cols-2">

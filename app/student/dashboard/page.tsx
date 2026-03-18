@@ -26,6 +26,7 @@ export default function StudentDashboardPage() {
         { href: "/student/reflection", label: "Reflection" },
         { href: "/teacher", label: "Teacher Preview" }
       ]}
+      showSignOut
     >
       <div className="grid gap-4 xl:grid-cols-[1.1fr_0.9fr]">
         <div className="space-y-4">

@@ -10,6 +10,7 @@ export default function StudentMapPage() {
         { href: "/student/dashboard", label: "Dashboard" },
         { href: "/student/map", label: "Map" }
       ]}
+      showSignOut
     >
       <ScenarioMap />
     </AppShell>

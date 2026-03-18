@@ -10,6 +10,7 @@ export default function TeacherReportsPage() {
         { href: "/teacher", label: "Overview" },
         { href: "/teacher/reports", label: "Reports" }
       ]}
+      showSignOut
     >
       <TeacherDashboard />
     </AppShell>

@@ -23,6 +23,7 @@ export default async function ScenarioPage({
         { href: "/student/map", label: "Map" },
         { href: `/student/scenarios/${scenario.slug}`, label: "Scenario" }
       ]}
+      showSignOut
     >
       <div className="grid gap-4">
         <Card>

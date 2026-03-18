@@ -11,6 +11,7 @@ export default function TeacherAssignmentsPage() {
         { href: "/teacher", label: "Overview" },
         { href: "/teacher/assignments", label: "Assignments" }
       ]}
+      showSignOut
     >
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {scenarios.map((scenario) => (
