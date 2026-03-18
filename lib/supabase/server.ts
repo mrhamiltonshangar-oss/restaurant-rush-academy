@@ -2,6 +2,16 @@ import { cookies } from "next/headers";
 import { createServerClient } from "@supabase/ssr";
 import { hasSupabaseEnv, serverEnv } from "./env";
 
+type CookieOptions = {
+  domain?: string;
+  expires?: Date;
+  httpOnly?: boolean;
+  maxAge?: number;
+  path?: string;
+  sameSite?: "lax" | "strict" | "none" | boolean;
+  secure?: boolean;
+};
+
 export async function createSupabaseServerClient() {
   if (!hasSupabaseEnv() || !serverEnv.success) return null;
 
@@ -15,10 +25,10 @@ export async function createSupabaseServerClient() {
         get(name: string) {
           return cookieStore.get(name)?.value;
         },
-        set(name: string, value: string, options) {
+        set(name: string, value: string, options: CookieOptions) {
           cookieStore.set({ name, value, ...options });
         },
-        remove(name: string, options) {
+        remove(name: string, options: CookieOptions) {
           cookieStore.set({ name, value: "", ...options });
         }
       }
